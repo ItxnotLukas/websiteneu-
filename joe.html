@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmieren lernen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e; /* Dark background color */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 48px; /* Larger font size */
+            color: #ff9900;
+            margin-bottom: 20px; /* Add some space below the heading */
+        }
+
+        p {
+            font-size: 24px; /* Larger font size */
+        }
+
+        /* Animation keyframes */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        #code-animation {
+            font-size: 28px; /* Larger font size */
+            animation: bounce 2s infinite;
+            background-color: #333; /* Dark background for code */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px; /* Add space below code */
+        }
+
+        /* Language selection buttons */
+        #language-selection {
+            margin-top: 20px;
+        }
+
+        .language-button {
+            background-color: #ff9900;
+            color: #1e1e1e; /* Dark text color */
+            font-size: 24px; /* Larger font size */
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease; /* Smooth color transition */
+        }
+
+        .language-button:hover {
+            background-color: #1e1e1e; /* Dark background on hover */
+            color: #ff9900; /* Text color on hover */
+        }
+
+        /* Tutorial sections */
+        .tutorial {
+            background-color: #333; /* Dark background for tutorials */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .tutorial h2 {
+            font-size: 28px;
+            color: #ff9900;
+            cursor: pointer;
+            margin-bottom: 10px; /* Add space below headings */
+        }
+
+        .tutorial pre {
+            font-size: 20px;
+            color: #fff;
+            background-color: #1e1e1e; /* Dark background for code blocks */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haiiii! Mein Name ist Hans aus der Heide</h1>
+    <p>Hier kannst du alles über Programmieren lernen!</p>
+    <p>Schau dir diesen coolen animierten Code an:</p>
+    <div id="code-animation">
+        <code>
+            for (int i = 0; i &lt; 5; i++) {
+                System.out.println("Hallo, Welt!");
+            }
+        </code>
+    </div>
+    <div id="language-selection">
+        <button class="language-button" onclick="toggleTutorial('javascript')">JavaScript</button>
+        <button class="language-button" onclick="toggleTutorial('python')">Python</button>
+        <button class="language-button" onclick="toggleTutorial('java')">Java</button>
+        <button class="language-button" onclick="toggleTutorial('ruby')">Ruby</button>
+        <button class="language-button" onclick="toggleTutorial('css')">CSS</button>
+        <button class="language-button" onclick="toggleTutorial('csharp')">C#</button>
+    </div>
+    
+    <!-- JavaScript Tutorial Section -->
+    <div id="javascript" class="tutorial">
+        <h2 onclick="toggleTutorial('javascript')">JavaScript "Hello, World!" Programm</h2>
+        <p>Hier ist ein einfaches Beispiel für ein "Hello, World!" Programm in JavaScript:</p>
+        <pre>
+            <code>
+                console.log("Hallo, Welt!");
+            </code>
+        </pre>
+        <p>Das ist alles! Mit diesem Code kannst du "Hallo, Welt!" in der JavaScript-Konsole ausgeben.</p>
+    </div>
+
+    <!-- Python Tutorial Section -->
+    <div id="python" class="tutorial">
+        <h2 onclick="toggleTutorial('python')">Python "Hello, World!" Programm</h2>
+        <p>Hier ist ein einfaches Beispiel für ein "Hello, World!" Programm in Python:</p>
+        <pre>
+            <code>
+                print("Hallo, Welt!")
+            </code>
+        </pre>
+        <p>Das ist alles! Mit diesem Code kannst du "Hallo, Welt!" in der Python-Konsole ausgeben.</p>
+    </div>
+
+    <!-- Java Tutorial Section -->
+    <div id="java" class="tutorial">
+        <h2 onclick="toggleTutorial('java')">Java "Hello, World!" Programm</h2>
+        <p>Hier ist ein einfaches Beispiel für ein "Hello, World!" Programm in Java:</p>
+        <pre>
+            <code>
+                public class HelloWorld {
+                    public static void main(String[] args) {
+                        System.out.println("Hallo, Welt!");
+                    }
+                }
+            </code>
+        </pre>
+        <p>Das ist alles! Mit diesem Code kannst du "Hallo, Welt!" in der Java-Konsole ausgeben.</p>
+    </div>
+
+    <!-- Ruby Tutorial Section -->
+    <div id="ruby" class="tutorial">
+        <h2 onclick="toggleTutorial('ruby')">Ruby "Hello, World!" Programm</h2>
+        <p>Hier ist ein einfaches Beispiel für ein "Hello, World!" Programm in Ruby:</p>
+        <pre>
+            <code>
+                puts "Hallo, Welt!"
+            </code>
+        </pre>
+        <p>Das ist alles! Mit diesem Code kannst du "Hallo, Welt!" in der Ruby-Konsole ausgeben.</p>
+    </div>
+
+    <!-- CSS Tutorial Section -->
+    <div id="css" class="tutorial">
+        <h2 onclick="toggleTutorial('css')">CSS Styling</h2>
+        <p>Hier ist ein Beispiel für die Anwendung von CSS-Stilen auf ein HTML-Element.:</p>
+        <pre>
+            <code>
+                /* Fügen Sie CSS-Stile zu einem Element mit der ID 'my-element' hinzu' */
+                #my-element {
+                    background-color: #ff9900; /* Orangener Hintergrund */
+                    color: #1e1e1e; /* Dunkler Text Farbe */
+                    font-size: 24px; /* Dickere Schrift  */
+                }
+            </code>
+        </pre>
+        <p>Dieser CSS-Code wird ein Element mit der ID 'my-element' gestalten. Sie können verschiedene Stile anwenden, um deine Webseite großartig aussehen zu lassen!</p>
+    </div>
+
+    <!-- C# Tutorial Section -->
+    <div id="csharp" class="tutorial">
+        <h2 onclick="toggleTutorial('csharp')">C# "Hallo, Welt!" Program</h2>
+        <p>Hier ist ein einfaches Beispiel von "Hallo, Welt!" in C#</p>
+        <pre>
+            <code>
+                using System;
+
+                class Program {
+                    static void Main() {
+                        Console.WriteLine("Hallo, Welt!");
+                    }
+                }
+            </code>
+        </pre>
+        <p>Das ist alles! Mit diesem Code kannst du "Hallo, Welt!" in der C#-Konsole ausgeben.</p>
+    </div>
+
+    <script>
+        function toggleTutorial(language) {
+            var tutorial = document.getElementById(language);
+            if (tutorial.style.display === 'none' || tutorial.style.display === '') {
+                tutorial.style.display = 'block';
+            } else {
+                tutorial.style.display = 'none';
+            }
+        }
+    </script>
+
+    <script src="index.js"></script> <!-- Reference your JavaScript file -->
+    <script src="python_challenge.py"></script> <!-- Reference your Python file -->
+    <script src="FindLargestNumber.java"></script> <!-- Reference your Java file -->
+    <script src="ruby_challenge.rb"></script> <!-- Reference your Ruby file -->
+
+    <!-- Credits -->
+    <footer>
+        <span class="footer-span" style="color: #ff9900;">&copy;</span>
+        <span class="footer-span-2" style="color: #4CAF50;">2023</span>
+        <span class="footer-span-4" style="color: #FF5722;">|</span>
+        <span class="footer-span-5" style="color: #E91E63;">Made</span>
+        <span class="footer-span-6" style="color: #673AB7;">with</span>
+        <span class="footer-span-7" style="color: #009688;">Love</span>
+        <span class="footer-span-8" style="color: #FFC107;">by</span>
+        <span class="footer-span-9" style="color: #9C27B0;">Lukas</span>
+        <span class="footer-span-10" style="color: #607D8B;">|</span>
+        <span class="footer-span-11" style="color: #795548;">Danke</span>
+        <span class="footer-span-12" style="color: #3F51B5;">das</span>
+        <span class="footer-span-13" style="color: #FF9800;">du</span>
+        <span class="footer-span-14" style="color: #2196F3;">hier</span>
+        <span class="footer-span-15" style="color: #FF5722;">warst!</span>
+    </footer>
+    
+</body>
+</html>
